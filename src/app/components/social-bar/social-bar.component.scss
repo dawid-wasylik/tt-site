@@ -1,0 +1,22 @@
+ul{
+    list-style-type: none;
+    position: fixed;
+    right:4%;
+}
+li{
+    
+    color:#454545;
+    transition:0.3s;
+}
+@media (max-width: 576px) {
+ul{
+    top:2%;
+}
+li{
+    font-size:0.9em;
+}
+}
+
+li:hover{
+    -webkit-transform: scale(1.7);
+}
