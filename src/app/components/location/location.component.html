@@ -1,21 +1,360 @@
 <div class="container-fluid pt-2">
-    <div class="row">
+  <div class="row">
+    <div class="col-12">
+      <p  class="header-text text-center text-uppercase mt-4 fw-600">Nasze lokalizacje</p>
+    </div>
+    <!-- > SM  version -->
+    <div class="col-12 col-md-12 col-sm-12 col-lg-12 map d-none d-md-block">
+      <img src="../../../assets/map.svg" class="" alt="">
+      <div class="pins">
+        <!-- Koszalin -->
+        <span other (mouseover)="getSelectedValue(23)">
+          <i  class="fas fa-map-marker-alt pin sanfrancisco cursor-p"></i>
+        </span>
+        <span other (mouseover)="getSelectedValue(25)">
+          <i  class="fas fa-map-marker-alt pin tampa cursor-p"></i>
+        </span>
+        <span other (mouseover)="getSelectedValue(24)">
+          <i  class="fas fa-map-marker-alt pin pittsburgh cursor-p"></i>
+        </span>
+        <span  other (mouseover)="getSelectedValue(14)">
+          <i  class="fas fa-map-marker-alt pin london cursor-p"></i>
+        </span>
+        <span other (mouseover)="getSelectedValue(15)">
+          <i  class="fas fa-map-marker-alt pin paris cursor-p"></i>
+        </span>
+        <span other (mouseover)="getSelectedValue(16)">
+          <i  class="fas fa-map-marker-alt pin hochstadt cursor-p"></i>
+        </span>
+        <span other (mouseover)="getSelectedValue(18)">
+          <i  class="fas fa-map-marker-alt pin munich cursor-p"></i>
+        </span>
+        <span other (mouseover)="getSelectedValue(17)">
+          <i  class="fas fa-map-marker-alt pin copenhagen cursor-p"></i>
+        </span>
+        <span other (mouseover)="getSelectedValue(20)">
+          <i  class="fas fa-map-marker-alt pin minsk cursor-p"></i>
+        </span>
+        <span other (mouseover)="getSelectedValue(19)">
+          <i  class="fas fa-map-marker-alt pin kijow cursor-p"></i>
+        </span>
+        <span other (mouseover)="getSelectedValue(21)">
+          <i  class="fas fa-map-marker-alt pin tajpej cursor-p"></i>
+        </span>
+        <span other (mouseover)="getSelectedValue(22)">
+          <i  class="fas fa-map-marker-alt pin kuala cursor-p"></i>
+        </span>
+        <span (mouseover)="getSelectedValue(0)">
+          <i  class="fas fa-map-marker-alt pin koszalin cursor-p"></i>
+        </span>
+        <!-- Olsztyn -->
+        <span (mouseover)="getSelectedValue(1)">
+        <i class="fas fa-map-marker-alt pin olsztyn cursor-p"></i>
+        </span>
+        <!-- Białystok -->
+      <span (mouseover)="getSelectedValue(2)">
+        <i class="fas fa-map-marker-alt pin bialystok cursor-p"></i>
+      </span >
+      <span (mouseover)="getSelectedValue(8)">
+        <i class="fas fa-map-marker-alt pin warszawa cursor-p"></i>
+      </span>
+      <span (mouseover)="getSelectedValue(4)">
+        <i class="fas fa-map-marker-alt pin poznan cursor-p"></i>
+      </span>
+      <span (mouseover)="getSelectedValue(3)">
+        <i class="fas fa-map-marker-alt pin zielonagora cursor-p"></i>
+      </span>
+      <span (mouseover)="getSelectedValue(5)">
+        <i class="fas fa-map-marker-alt pin ostrowwielkopolski cursor-p"></i>
+      </span>
+      <span (mouseover)="getSelectedValue(7)">
+        <i class="fas fa-map-marker-alt pin lodz cursor-p"></i>
+      </span>
+      <span (mouseover)="getSelectedValue(9)">
+        <i class="fas fa-map-marker-alt pin wroclaw cursor-p"></i>
+      </span>
+      <span (mouseover)="getSelectedValue(10)">
+        <i class="fas fa-map-marker-alt pin kielce cursor-p"></i>
+      </span>
+      <span (mouseover)="getSelectedValue(6)">
+        <i class="fas fa-map-marker-alt pin lublin cursor-p"></i>
+      </span >
+      <span (mouseover)="getSelectedValue(13)">
+        <i class="fas fa-map-marker-alt pin rzeszow cursor-p"></i>
+      </span>
+      <span (mouseover)="getSelectedValue(12)">
+        <i class="fas fa-map-marker-alt pin tarnow cursor-p"></i>
+      </span>
+      <span (mouseover)="getSelectedValue(11)">
+        <i class="fas fa-map-marker-alt pin krakow cursor-p"></i>
+      </span>
+      <div class="info-box-poland">
+        <div class="row">
+          <ng-container *ngFor="let location of locations">
+              <div *ngIf="location.id == selectedValue" class="col-11 col-md-12 ms-auto me-auto contact">
+                <div *ngIf="location.region == 'poland'" class="col-12 text-center pt-1 pb-1">
+                  <div class="pt-2 ps-2 pe-2 h-100 pb-2">
+                    <p class="header text-uppercase fw-600">
+                      {{ location.city }}
+                    </p>
+                    <p class="nameOne text-uppercase text-muted mb-0 fw-500 ">{{location.nameOne}}</p>
+                    <p class="nameTwo text-uppercase text-muted fw-500 mt-0 mb-0">{{location.nameTwo}}</p>
+                    <p class="nameThree text-uppercase text-muted fw-500 mt-0">{{location.nameThree}}</p>
+                    <div noMobile class="address">
+                      <p class="fw-700 mb-0" *ngIf="location.street != ''">
+                        ul. {{location.street}} {{location.number}}
+                      </p>
+                      <p class="mt-0">{{location.postalCode}}
+                        <span class="first-upper">
+                          {{location.city}}
+                        </span>
+                      </p>
+                      <div class="contact"></div>
+                      <p *ngIf="location.phone != ''" class="mb-0">
+                        tel: + {{location.phone}}
+                      </p>
+                      <p *ngIf="location.fax != ''" class="mt-0 mb-1">
+                        fax: + {{location.fax}}
+                      </p>
+                      <p *ngIf="location.email != ''">
+                        email: {{location.email}}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </ng-container>
+      </div>
+      </div>
+      <div class="info-box-other">
+     
+          <ng-container *ngFor="let location of locations">
+              <div *ngIf="location.id == selectedValueOther" class="contact">
+               
+                  <div class="box-other pt-3 ps-2 pb-3 pe-2 text-center">
+                    <p class="header text-uppercase fw-600">
+                      {{ location.city }}
+                    </p>
+                    <p class="nameOne text-uppercase text-muted mb-0 fw-500 ">{{location.nameOne}}</p>
+                    <p class="nameTwo text-uppercase text-muted fw-500 mt-0 mb-0">{{location.nameTwo}}</p>
+                    <p class="nameThree text-uppercase text-muted fw-500 mt-0">{{location.nameThree}}</p>
+                    <div noMobile class="address">
+                      <p class="fw-700 mb-0" *ngIf="location.street != ''">
+                        ul. {{location.street}} {{location.number}}
+                      </p>
+                      <p class="mt-0">{{location.postalCode}}
+                        <span class="first-upper">
+                          {{location.city}}
+                        </span>
+                      </p>
+                      <div class="contact"></div>
+                      <p *ngIf="location.phone != ''" class="mb-0">
+                        tel: + {{location.phone}}
+                      </p>
+                      <p *ngIf="location.fax != ''" class="mt-0 mb-1">
+                        fax: + {{location.fax}}
+                      </p>
+                      <p *ngIf="location.email != ''">
+                        email: {{location.email}}
+                      </p>
+                    </div>
+                  </div>
+             
+              </div>
+          </ng-container>
+
+      </div>
+      </div>
+    </div>
+    <!-- Mobile version -->
+    <div class="col-12 d-md-none">
+      <ul class="nav justify-content-center  ms-auto me-auto fw-600  mb-3" id="pills-tab" role="tablist">
+        <li class="nav-item fw-600 " role="presentation">
+          <button class=" active" id="pills-poland-tab" data-bs-toggle="pill" data-bs-target="#pills-poland"
+            type="button" role="tab" aria-controls="pills-poland" aria-selected="true">Polska</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="ms-2 me-2" id="pills-europe-tab" data-bs-toggle="pill" data-bs-target="#pills-europe"
+            type="button" role="tab" aria-controls="pills-europe" aria-selected="false">Europa</button>
+        </li>
+        <li class="nav-item me-2" role="presentation">
+          <button class="" id="pills-asia-tab" data-bs-toggle="pill" data-bs-target="#pills-asia" type="button"
+            role="tab" aria-controls="pills-asia" aria-selected="false">Azja</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="" id="pills-american-tab" data-bs-toggle="pill" data-bs-target="#pills-american" type="button"
+            role="tab" aria-controls="pills-american" aria-selected="false">Ameryka</button>
+        </li>
+      </ul>
+      <div class="row">
         <div class="col-12">
-            <p class="header-text text-center text-uppercase mt-4 fw-600">Nasze lokalizacje</p>
+          <div class="tab-content" id="pills-tabContent">
+            <div class="tab-pane fade show active" id="pills-poland" role="tabpanel" aria-labelledby="pills-poland-tab">
+              <div class="row">
+                <ng-container *ngFor="let location of locations">
+
+                  <div *ngIf="location.region == 'poland'" class="col-6 text-center pt-1 pb-1">
+                    <div class="box pt-2 ps-2 pe-2 h-100 pb-2">
+                      <p class="header text-uppercase fw-600">
+                        {{ location.city }}
+                      </p>
+                      <p class="nameOne text-uppercase text-muted mb-0 fw-500 ">{{location.nameOne}}</p>
+                      <p class="nameTwo text-uppercase text-muted fw-500 mt-0 mb-0">{{location.nameTwo}}</p>
+                      <p class="nameThree text-uppercase text-muted fw-500 mt-0">{{location.nameThree}}</p>
+                      <div class="address">
+                        <p class="fw-700 mb-0" *ngIf="location.street != ''">
+                          ul. {{location.street}} {{location.number}}
+                        </p>
+                        <p class="mt-0">{{location.postalCode}}
+                          <span class="first-upper">
+                            {{location.city}}
+                          </span>
+                        </p>
+                        <div class="contact"></div>
+                        <p *ngIf="location.phone != ''" class="mb-0">
+                          tel: + {{location.phone}}
+                        </p>
+                        <p *ngIf="location.fax != ''" class="mt-0 mb-1">
+                          fax: + {{location.fax}}
+                        </p>
+                        <p *ngIf="location.email != ''">
+                          email: {{location.email}}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                </ng-container>
+              </div>
+            </div>
+            <div class="tab-pane fade" id="pills-europe" role="tabpanel" aria-labelledby="pills-europe-tab">
+              <div class="row">
+                <ng-container *ngFor="let location of locations">
+
+                  <div *ngIf="location.region == 'europe'" class="col-6 text-center pt-1 pb-1">
+                    <div class="box pt-2 ps-2 pe-2 h-100 pb-2">
+                      <p class="header text-uppercase fw-600">
+                        {{ location.city }}
+                      </p>
+                      <p class="nameOne text-uppercase text-muted mb-0 fw-500 ">{{location.nameOne}}</p>
+                      <p class="nameTwo text-uppercase text-muted fw-500 mt-0 mb-0">{{location.nameTwo}}</p>
+                      <p class="nameThree text-uppercase text-muted fw-500 mt-0">{{location.nameThree}}</p>
+                      <div class="address">
+                        <p class="fw-700 mb-0">
+                          {{location.country}}
+                        </p>
+                        <p class="fw-700 mb-0" *ngIf="location.street != ''">
+                          ul. {{location.street}} {{location.number}}
+                        </p>
+                        <p class="mt-0">{{location.postalCode}}
+                          <span class="first-upper">
+                            {{location.city}}
+                          </span>
+                        </p>
+                        <div class="contact"></div>
+                        <p *ngIf="location.phone != ''" class="mb-0">
+                          tel: + {{location.phone}}
+                        </p>
+                        <p *ngIf="location.fax != ''" class="mt-0 mb-1">
+                          fax: + {{location.fax}}
+                        </p>
+                        <p *ngIf="location.email != ''">
+                          email: {{location.email}}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                </ng-container>
+              </div>
+            </div>
+            <div class="tab-pane fade" id="pills-asia" role="tabpanel" aria-labelledby="pills-asia-tab">
+              <div class="row">
+                <ng-container *ngFor="let location of locations">
+
+                  <div *ngIf="location.region == 'asia'" class="col-6 text-center pt-1 pb-1">
+                    <div class="box pt-2 ps-2 pe-2 h-100 pb-2">
+                      <p class="header text-uppercase fw-600">
+                        {{ location.city }}
+                      </p>
+                      <p class="nameOne text-uppercase text-muted mb-0 fw-500 ">{{location.nameOne}}</p>
+                      <p class="nameTwo text-uppercase text-muted fw-500 mt-0 mb-0">{{location.nameTwo}}</p>
+                      <p class="nameThree text-uppercase text-muted fw-500 mt-0">{{location.nameThree}}</p>
+                      <div class="address">
+                        <p class="fw-700 mb-0">
+                          {{location.country}}
+                        </p>
+                        <p class="fw-700 mb-0" *ngIf="location.street != ''">
+                          ul. {{location.street}} {{location.number}}
+                        </p>
+                        <p class="mt-0">{{location.postalCode}}
+                          <span class="first-upper">
+                            {{location.city}}
+                          </span>
+                        </p>
+                        <div class="contact"></div>
+                        <p *ngIf="location.phone != ''" class="mb-0">
+                          tel: + {{location.phone}}
+                        </p>
+                        <p *ngIf="location.fax != ''" class="mt-0 mb-1">
+                          fax: + {{location.fax}}
+                        </p>
+                        <p *ngIf="location.email != ''">
+                          email: {{location.email}}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                </ng-container>
+              </div>
+            </div>
+            <div class="tab-pane fade" id="pills-american" role="tabpanel" aria-labelledby="pills-american-tab">
+              <div class="row">
+                <ng-container *ngFor="let location of locations">
+
+                  <div *ngIf="location.region == 'american'" class="col-6 text-center pt-1 pb-1">
+                    <div class="box pt-2 ps-2 pe-2 h-100 pb-2">
+                      <p class="header text-uppercase fw-600">
+                        {{ location.city }}
+                      </p>
+                      <p class="nameOne text-uppercase text-muted mb-0 fw-500 ">{{location.nameOne}}</p>
+                      <p class="nameTwo text-uppercase text-muted fw-500 mt-0 mb-0">{{location.nameTwo}}</p>
+                      <p class="nameThree text-uppercase text-muted fw-500 mt-0">{{location.nameThree}}</p>
+                      <div class="address">
+                        <p class="fw-700 mb-0">
+                          {{location.country}}
+                        </p>
+                        <p class="fw-700 mb-0" *ngIf="location.street != ''">
+                          ul. {{location.street}} {{location.number}}
+                        </p>
+                        <p class="mt-0">{{location.postalCode}}
+                          <span class="first-upper">
+                            {{location.city}}
+                          </span>
+                        </p>
+                        <div class="contact"></div>
+                        <p *ngIf="location.phone != ''" class="mb-0">
+                          tel: + {{location.phone}}
+                        </p>
+                        <p *ngIf="location.fax != ''" class="mt-0 mb-1">
+                          fax: + {{location.fax}}
+                        </p>
+                        <p *ngIf="location.email != ''">
+                          email: {{location.email}}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                </ng-container>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="col-12 col-md-12 col-sm-12 col-lg-12 map mobile-location">
-            <img src="../../../assets/map.svg" class="" alt="">
-            <div class="pins">  
-            <!-- Koszalin -->
-            <i class="fas fa-map-marker-alt text-danger koszalin cursor-p"></i>
-             <!-- Olsztyn -->
-            <i class="fas fa-map-marker-alt text-white olsztyn cursor-p"></i>
-         <!-- Białystok -->
-            <i class="fas fa-map-marker-alt text-white bialystok cursor-p"></i>
+      </div>
+
     </div>
-        </div>
-    </div>
+  </div>
 
 </div>
-
-

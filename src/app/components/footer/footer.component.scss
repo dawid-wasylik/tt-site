@@ -1,0 +1,45 @@
+.container-fluid{
+    background-color: #c4c4c4;
+    color:white;
+}
+img path{
+    fill: white;
+}
+
+
+a{
+    color:white;
+    text-decoration: none;
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) { 
+ }
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {  }
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) { 
+    p{
+        font-size:1.1em;
+    }
+    .box{
+        border-left: 2px solid white;
+    }
+ }
+
+// X-Large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { 
+    .bottomBar{
+        font-size:1.3em;
+    }
+    img{
+        height: 30%;
+    }
+  
+ }
+
+// XX-Large devices (larger desktops, 1400px and up)
+@media (min-width: 1400px) {  }
+

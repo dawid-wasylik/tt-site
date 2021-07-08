@@ -2,7 +2,20 @@ $main-color: #446FC1;
 button{
     color:black;
 }
+.container-fluid{
+    position:relative;
+}
 
+.background-dots{
+    margin-top:3%;
+    height: 100%;
+    width:100%;
+    background-image: radial-gradient(circle at 4px 4px, #dddddd 4px, transparent 0);
+    background-size: 30px 30px;
+    z-index:-1;
+    position: absolute;
+    display:none
+}
 .name{
     color:$main-color;
 }
@@ -17,7 +30,12 @@ button{
     font-size: 0.75em;
 }
 
-
+#carouselExampleDark{
+    background-color: white;
+    z-index: 1;
+    -webkit-box-shadow: 0px 13px 3px -1px #d3d3d3; 
+    box-shadow: 0px 10px 3px -1px #c4c4c4; 
+}
 
 // X-Small devices (portrait phones, less than 576px)
 // No media query for `xs` since this is the default in Bootstrap
@@ -27,16 +45,52 @@ button{
     .mobile-location{
         display:block;
     }
+    .question-answer{
+        font-size: 0.85em;
+    }
+    .name{
+        font-size:0.9em;
+    }
+    .about{
+        font-size:0.9em;
+    }
+ 
  }
 
 // Medium devices (tablets, 768px and up)
-@media (min-width: 768px) {  }
+@media (min-width: 768px) { 
+    .question-answer{
+        font-size: 0.9em;
+    }
+    .name{
+        font-size:1.1em;
+    }
+    .about{
+        font-size:1em;
+    }
+    .background-dots{
+        display:block;
+
+    }
+ }
 
 // Large devices (desktops, 992px and up)
-@media (min-width: 992px) {  }
+@media (min-width: 992px) { 
+    .question-answer{
+        font-size: 1.1em;
+    }
+    .name{
+        font-size:1.2em;
+    }
+   
+ }
 
 // X-Large devices (large desktops, 1200px and up)
-@media (min-width: 1200px) {  }
+@media (min-width: 1200px) { 
+    .background-dots{
+        height: 65%;
+    }
+ }
 
 // XX-Large devices (larger desktops, 1400px and up)
 @media (min-width: 1400px) {  }

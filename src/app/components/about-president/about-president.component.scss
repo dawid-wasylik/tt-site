@@ -1,9 +1,28 @@
 $main-color: #446FC1;
-.container-fluid{
+
+.background-image{
+ 
+    height: 100%;
+    width: 100%;
+    background-position: cover cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    background-image: url('../../../assets/code.png');
+    display:none;
+    z-index:-1;
+}
+.in-box{
+    z-index:1;
     border-top-left-radius: 180px;
     background-color: #F2F2F2;
+    opacity: 1;
     border-bottom-left-radius: 100px;
     color: #454545;
+    position:relative;
+
+}
+.description{
+    font-size:0.8em;
 }
 
 .background-yellow{
@@ -15,3 +34,57 @@ $main-color: #446FC1;
     background-color: $main-color;
 
 }
+
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) { 
+   
+    .description{
+        font-size:0.9em;
+    }
+  
+
+ }
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) { 
+       
+    .description{
+        font-size:0.9em;
+    }
+    .in-box{
+        width:90%;
+    }
+
+    .in-box{
+        border-top-left-radius: 200px;
+        border-bottom-left-radius: 200px;
+    }
+    .background-image{
+        display:block;
+    
+    }
+       
+ }
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) { 
+   
+    .description{
+        font-size:1.1em;
+    }
+  
+ }
+
+// X-Large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { 
+  
+    .description{
+        font-size:1.4em;
+    }
+ }
+
+// XX-Large devices (larger desktops, 1400px and up)
+@media (min-width: 1400px) { 
+   
+ }

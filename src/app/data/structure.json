@@ -1,0 +1,62 @@
+[
+    {
+        "id": 0,
+        "name": "TT",
+        "image": "logo_TT.png",
+        "description": "Oprogramowania dla energetyki, przemysłu i medycyny"
+    },
+    {
+        "id": 1,
+        "name": "TT USA",
+        "image": "logo_TT_USA.svg",
+        "description": "Bezpośrednia obsługa projektów realizowanych w Ameryce Północnej"
+    },
+    {
+        "id": 2,
+        "name": "TT MS",
+        "image": "logo_TT_MS.svg",
+        "description": "Outsourcing, Managed services. NET, Java, C/C++, technologie mobilne"
+    },
+    {
+        "id": 3,
+        "name": "TT PSC",
+        "image": "logo_TT_PSC.svg",
+        "description": "Internet of Things Augmented Reality, Virtual Reality, Product Lifecycle Managemene"
+    },
+    {
+        "id": 4,
+        "name": "TT AS",
+        "image": "logo_TT_AS.svg",
+        "description": "Zarządzanie danymi, Cybersecurity, Prognozowanie, Analityka danych i BI"
+    },
+    {
+        "id": 5,
+        "name": "TT SW",
+        "image": "logo_TT_SW.svg",
+        "description": "Oprogramowanie dla energetyki, przemysłu i medycyny"
+    },
+    {
+        "id": 6,
+        "name": "TT UKR",
+        "image": "logo_TT_UKR.png",
+        "description": "Rozwiązania IT na rynku energii elektrycznej i gazu  na Ukrainie"
+    },
+    {
+        "id": 7,
+        "name": "TT CS",
+        "image": "logo_TT_CS.svg",
+        "description": "Oprogramowanie dla energetyki, przemysłu i medycyny"
+    },
+    {
+        "id": 8,
+        "name": "TT HC",
+        "image": "logo_TT_HC.png",
+        "description": "Rozwiązania dla sektora Healthcare"
+    },
+    {
+        "id": 9,
+        "name": "Promison",
+        "image": "logo_TT_P.svg",
+        "description": "Utrzymywanie infrasrtuktury IT, zarządzanie usługami i bezpieczeństwem IT"
+    }
+]

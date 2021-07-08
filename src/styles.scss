@@ -1,7 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
-
 * {
     font-family: 'Arimo', sans-serif;
+    scroll-behavior: smooth;
 }
 
 .fw-100{
@@ -38,3 +38,45 @@
 .overflow-hidden{
     overflow: hidden;
 }
+
+ 
+// global @media
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) { 
+  .header-text{
+      font-size:1.5em;
+  }
+ }
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+    .header-text{
+        font-size:1.7em;
+    }
+  }
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) { 
+    .header-text{
+        font-size:2em;
+    }
+ }
+
+// X-Large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { 
+    .header-text{
+        font-size:2.5em;
+    }
+ }
+
+// XX-Large devices (larger desktops, 1400px and up)
+@media (min-width: 1400px) { 
+    .header-text{
+        font-size:3em;
+    }
+ }
+
+
+ @import "../node_modules/bootstrap/scss/bootstrap";
+

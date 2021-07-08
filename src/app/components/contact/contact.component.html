@@ -1,17 +1,49 @@
-<div class="container-fluid">
+<div class="container-fluid pb-5">
     <div class="row">
         <div class="col-12">
-            <p class="header-text text-center text-uppercase mt-4 fw-600">Kontakt</p>
+            <p class="header-text text-center text-uppercase mt-4 mb-5 fw-600">Kontakt</p>
         </div>
         <div class="col-12">
             <div class="row">
-                <div class="col-6 right-border text-center">
+                <div class="col-6 right-border text-center pb-5 ps-sm-5 pe-sm-5 ps-md-5 pe-md-5">
                     <p class="fw-500">
                         Spółka
                     </p>
-                </div>
-                <div class="col-6">
+                    <div class="row">
+                        <div class="col-12 col-md-9 col-lg-7 col-xl-6 ms-auto me-auto">
+                            <select (change)="getSelectedValue($event)" class="form-select" aria-label="spolka"
+                                placeholder="Wybierz Spółkę">
+                                <option selected value="0">Wybierz spółkę</option>
+                                <option *ngFor="let option of contactData" value={{option.id}}>{{option.name}}</option>
 
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 ps-md-5">
+                    <div class="row">
+                        <ng-container *ngFor="let contact of contactData">
+                            <div *ngIf="contact.id == selectedValue" class="col-11 col-md-10  ms-auto me-auto contact">
+                                <img src="../../../assets/{{contact.image}}" alt="img-fluid" class="img-fluid mb-4">
+                                <p class="fw-500 text-start">
+                                    <i class="fas fs-2 text-muted fa-phone me-3 me-md-5">
+                                    </i>
+                                    <span>
+                                        +{{contact.phone}}
+                                    </span>
+                                </p>
+                                <p class="fw-500 text-start"><i
+                                        class="fas fs-2 text-muted fa-envelope me-3 me-md-5"></i><a
+                                        href="mailto:{{contact.email}}">{{contact.email}}</a></p>
+                                <p class="fw-500 text-start">
+                                    <i
+                                        class="fas fs-2 text-muted fa-map-marker me-3 me-md-5"></i><span>{{contact.address}}</span>
+                                </p>
+                                <p class="fw-500 text-start"><i class="fas fs-2 text-muted fa-globe me-3 me-md-5"></i><a
+                                        href="{{contact.site}}">{{contact.site}}</a></p>
+                            </div>
+                        </ng-container>
+                    </div>
                 </div>
             </div>
         </div>
